@@ -22,9 +22,10 @@ class TestSelenium(object):
         capabilities = {
             'browserName': os.environ.get('BROWSER_NAME', None),
             'platformName': os.environ.get('PLATFORM_NAME', 'Android'),
-            'appium:app': app,
-            'appium:deviceName': os.environ.get('DEVICE_NAME', 'Google.*'),
-            'appium:automationName': os.environ.get('AUTOMATION_NAME', 'uiautomator2'),
+            'app': app,
+            'deviceName': os.environ.get('DEVICE_NAME', 'Google.*'),
+            'automationName': os.environ.get('AUTOMATION_NAME', 'uiautomator2'),
+            'platformVersion': os.environ.get('PLATFORM_VERSION', '12'),
             'sauce:options': {
                 'username': os.environ["SAUCE_USERNAME"],
                 'accesskey': os.environ["SAUCE_ACCESS_KEY"],
